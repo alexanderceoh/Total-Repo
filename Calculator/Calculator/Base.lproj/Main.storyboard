@@ -219,7 +219,7 @@
                                     <constraint firstAttribute="width" secondItem="oWD-e1-OG9" secondAttribute="height" multiplier="1:1" id="hvy-MF-gtN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <state key="normal" title="X"/>
+                                <state key="normal" title="x"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="hvy-MF-gtN"/>
@@ -326,11 +326,19 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXo-Hc-ZjW">
+                                        <rect key="frame" x="8" y="8" width="56" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.62584225716174458" green="0.96424830281718321" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="JXo-Hc-ZjW" firstAttribute="top" secondItem="iVb-3A-zZ5" secondAttribute="top" constant="8" id="4Jx-rD-RiG"/>
                                     <constraint firstAttribute="trailing" secondItem="m9a-aq-MHQ" secondAttribute="trailing" constant="20" id="5aG-cM-tzy"/>
                                     <constraint firstAttribute="bottom" secondItem="m9a-aq-MHQ" secondAttribute="bottom" constant="10" id="8zR-gP-Fzy"/>
+                                    <constraint firstItem="JXo-Hc-ZjW" firstAttribute="leading" secondItem="iVb-3A-zZ5" secondAttribute="leading" constant="8" id="HRG-JF-5PG"/>
                                     <constraint firstAttribute="bottom" secondItem="m9a-aq-MHQ" secondAttribute="bottom" id="O6s-cC-JvV"/>
                                     <constraint firstAttribute="bottom" secondItem="m9a-aq-MHQ" secondAttribute="bottom" constant="10" id="Usv-kY-XoL"/>
                                     <constraint firstItem="m9a-aq-MHQ" firstAttribute="leading" secondItem="iVb-3A-zZ5" secondAttribute="leading" constant="20" id="iaR-pJ-CCB"/>
@@ -479,11 +487,12 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="displayLabel" destination="m9a-aq-MHQ" id="9Xd-ze-8yt"/>
+                        <outlet property="displayOperation" destination="JXo-Hc-ZjW" id="YJC-Rj-Xay"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37" y="308"/>
+            <point key="canvasLocation" x="-90" y="316"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,10 @@ var operation: OperationType?
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var displayOperation: UILabel!
+
+    
     @IBOutlet weak var displayLabel: UILabel!
 
     @IBAction func numberPressed(button: UIButton) {
@@ -49,9 +53,25 @@ class ViewController: UIViewController {
         number2 = ""
         operation = nil
         displayLabel.text = "0"
+        displayOperation.text = ""
     }
     
     @IBAction func changeSign() {
+        
+        if operation == nil {
+            
+            let value = -1 * Double(number1)!
+            
+            number1 = "\(value)"
+            displayLabel.text = number1
+            
+        } else {
+            
+            let value = -1 * Double(number2)!
+            
+            number2 = "\(value)"
+            displayLabel.text = number2
+        }
         
         
     }
@@ -61,6 +81,8 @@ class ViewController: UIViewController {
         let opSign = button.titleLabel!.text!
         
         operation = OperationType(rawValue: opSign)
+        
+        displayOperation.text = opSign
     }
     
     @IBAction func runOperation() {
@@ -70,8 +92,19 @@ class ViewController: UIViewController {
         
         let total = calculateNumbers(n1: num1!, n2: num2!, operation: operation!)
         
-        number1 = "\(total)"
-        displayLabel.text = "\(total)"
+        if total % 1 == 0 {
+            
+            displayLabel.text = "\(Int(total))"
+            
+        } else {
+            
+            number1 = "\(total)"
+            
+            displayLabel.text = "\(total)"
+            
+        }
+        
+       
         
     }
 
